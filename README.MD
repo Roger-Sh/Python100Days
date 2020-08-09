@@ -1,1 +1,2 @@
-{\rtf1}
+repo for learning python 100 days
+
