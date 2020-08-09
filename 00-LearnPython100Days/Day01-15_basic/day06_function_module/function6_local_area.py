@@ -14,11 +14,11 @@ def foo1():
 
 foo1()
 # print(a)  # NameError
--def foo2():
-    print(b)
+# def foo2():
+#     print(b)
 
 
-foo2()
+# foo2()
 
 
 def foo3():
@@ -27,7 +27,7 @@ def foo3():
 
 
 foo3()
-print(b)
+# print(b)
 
 
 def foo4():
