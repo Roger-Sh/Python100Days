@@ -15,18 +15,22 @@ import math
 class Circle(object):
 
     def __init__(self, radius):
-        self._radius = radius
+        """
+        swimming pool radius
+        :param radius:
+        """
+        self._radius = radius       # private variable
 
-    @property
+    @property                       # get private variable, @property装饰器,负责把一个方法变成属性调用的：
     def radius(self):
         return self._radius
 
-    @radius.setter
+    @radius.setter                  # set private variable
     def radius(self, radius):
         self._radius = radius if radius > 0 else 0
 
     @property
-    def perimeter(self):
+    def perimeter(self):            # 周长
         return 2 * math.pi * self._radius
 
     @property

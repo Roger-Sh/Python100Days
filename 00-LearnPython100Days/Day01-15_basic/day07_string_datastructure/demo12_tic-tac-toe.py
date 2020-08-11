@@ -32,6 +32,7 @@ def main():
         turn = 'x'                  # 下棋者
         counter = 0                 # 步数
         os.system('cls')            # linux: clear
+        print()
         print_board(curr_board)
 
         while counter < 9:
@@ -47,6 +48,8 @@ def main():
                     turn = 'x'
 
             os.system('cls')
+            print()
+
             print_board(curr_board)
         choice = input('再玩一局?(yes|no)')
         begin = choice == 'yes'
