@@ -29,6 +29,6 @@ fruits = ['orange', 'peach', 'durian', 'watermelon']
 print(fruits[slice(1, 3)])
 
 # 输出符合myfilter的内容
-fruits2 = list(filter(myfilter, fruits))
+fruits2 = list(filter(myfilter, fruits))    #定义一个filter, 并用filter()去使用这个filter
 print(fruits)
 print(fruits2)

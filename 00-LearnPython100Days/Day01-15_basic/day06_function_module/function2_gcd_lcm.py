@@ -6,6 +6,7 @@ Author: 骆昊
 Date: 2018-03-05
 """
 
+
 # 最大公约数
 def gcd(x, y):
     if x > y:
@@ -19,7 +20,6 @@ def gcd(x, y):
 # 最小公倍数
 def lcm(x, y):
     return x * y // gcd(x, y)
-
 
 
 print(gcd(15, 27))
