@@ -13,16 +13,22 @@
 
 
 class Test:
-
+    # private attribute 私有属性
     def __init__(self, foo):
         self.__foo = foo            # __foo, private variable
 
+    # private attribute
     def __bar(self):                # __bar, private method
         print(self.__foo)
         print('__bar')
 
+    # like-private attribute, 类私有属性，实际上可以访问, 单下划线开头
+    def _test(self):
+        print("It's not a private attribute, so you can access it, but better not")
+
 
 def main():
+    # generate a new instance of Test
     test = Test('hello')
 
     # 无法直接访问 __ 开头的变量或方法，他们是私有变量和私有方法
@@ -32,6 +38,10 @@ def main():
     # 通过改写私有变量和私有方法的名字，在前面加上 _类名 即可
     test._Test__bar()
     print(test._Test__foo)
+
+    # 单下划线的属性可以访问，但建议不要
+    test._test()
+
 
 if __name__ == "__main__":
     main()
