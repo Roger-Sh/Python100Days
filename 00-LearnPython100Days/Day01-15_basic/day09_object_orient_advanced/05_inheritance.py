@@ -37,6 +37,7 @@ class Person(object):
         else:
             print('%s只能观看《熊出没》.' % self._name)
 
+
 # Student 继承了 Person
 class Student(Person):
     """学生"""
@@ -89,6 +90,7 @@ def main():
     stu = Student('王大锤', 15, '初三')
     stu.study('数学')
     stu.watch_av()
+
     t = Teacher('骆昊', 38, '砖家')
     t.teach('Python程序设计')
     t.watch_av()

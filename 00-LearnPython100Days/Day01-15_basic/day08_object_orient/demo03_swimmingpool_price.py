@@ -22,6 +22,7 @@ class Circle(object):
         self._radius = radius       # private variable
 
     # get private variable, @property装饰器,负责把一个方法变成属性调用的：
+    # 把一个getter方法变成属性，只需要加上@property就可以了，此时，@property本身又创建了另一个装饰器@radius.setter，负责把一个setter方法变成属性赋值
     @property
     def radius(self):
         return self._radius

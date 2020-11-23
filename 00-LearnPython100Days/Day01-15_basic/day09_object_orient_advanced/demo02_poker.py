@@ -16,6 +16,7 @@ class Card(object):
     def suite(self):
         return self._suite
 
+    # __str__ 产生人类可读的输出
     def __str__(self):
         if self._face == 1:
             face_str = 'A'
@@ -29,6 +30,7 @@ class Card(object):
             face_str = str(self._face)
         return '%s%s' % (self._suite, face_str)
 
+    # __repr__ 产生机器可读的输出
     def __repr__(self):
         return self.__str__()
 
@@ -97,12 +99,16 @@ def main():
     p = Poker()
     p.shuffle()
     players = [Player('东邪'), Player('西毒'), Player('南帝'), Player('北丐')]
+
+    # 每人摸13张牌
     for _ in range(13):
         for player in players:
             player.get(p.next)
+
+    # 玩家整理牌之后，打印出每个人的牌
     for player in players:
         print(player.name + ':', end=' ')
-        player.arrange(get_key)
+        player.arrange(get_key)         # 整理牌
         print(player.cards_on_hand)
 
 

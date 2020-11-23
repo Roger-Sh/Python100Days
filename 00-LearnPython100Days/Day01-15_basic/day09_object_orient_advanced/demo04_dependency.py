@@ -7,6 +7,7 @@ Date: 2018-03-12
 """
 
 
+# class Car
 class Car(object):
 
     def __init__(self, brand, max_speed):
@@ -30,6 +31,7 @@ class Car(object):
         return '%s当前时速%d' % (self._brand, self._current_speed)
 
 
+# class Student
 class Student(object):
 
     def __init__(self, name, age):
@@ -59,6 +61,7 @@ class Student(object):
         else:
             print('%s正在观看岛国爱情动作片.' % self._name)
 
+    # 比较对象 的 魔法方法
     # 重载大于(>)运算符
     def __gt__(self, other):
         return self._age > other._age

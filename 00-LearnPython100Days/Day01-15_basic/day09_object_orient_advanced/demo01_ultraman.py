@@ -107,8 +107,8 @@ class Ultraman(Fighter):
     # 对象 属性字符串
     def __str__(self):
         return '~~~%s奥特曼~~~\n' % self._name + \
-            '生命值: %d\n' % self._hp + \
-            '魔法值: %d\n' % self._mp
+                '生命值: %d\n' % self._hp + \
+                '魔法值: %d\n' % self._mp
 
 
 class Monster(Fighter):
@@ -122,7 +122,7 @@ class Monster(Fighter):
 
     def __str__(self):
         return '~~~%s小怪兽~~~\n' % self._name + \
-            '生命值: %d\n' % self._hp
+                '生命值: %d\n' % self._hp
 
 
 def is_any_alive(monsters):
@@ -156,6 +156,7 @@ def main():
     m2 = Monster('白元芳', 500)
     m3 = Monster('王大锤', 750)
     ms = [m1, m2, m3]
+
     fight_round = 1
     while u.alive and is_any_alive(ms):
         print('========第%02d回合========' % fight_round)

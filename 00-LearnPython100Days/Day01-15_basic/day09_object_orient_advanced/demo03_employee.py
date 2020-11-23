@@ -11,23 +11,29 @@ Author: 骆昊
 Date: 2018-03-12
 """
 
+# 抽象类所需要的包
 from abc import ABCMeta, abstractmethod
 
 
+# abstract class
 class Employee(object, metaclass=ABCMeta):
 
+    # init
     def __init__(self, name):
         self._name = name
 
+    # getter
     @property
     def name(self):
         return self._name
 
+    # abstract method
     @abstractmethod
     def get_salary(self):
         pass
 
 
+# class Manager inherit from class Employee
 class Manager(Employee):
 
     # 想一想: 如果不定义构造方法会怎么样
@@ -39,6 +45,7 @@ class Manager(Employee):
         return 12000
 
 
+# class Programmer inherit from class Employee
 class Programmer(Employee):
 
     def __init__(self, name):
@@ -51,6 +58,7 @@ class Programmer(Employee):
         return 100 * self._working_hour
 
 
+# class Salesman inherit from class Employee
 class Salesman(Employee):
 
     def __init__(self, name):

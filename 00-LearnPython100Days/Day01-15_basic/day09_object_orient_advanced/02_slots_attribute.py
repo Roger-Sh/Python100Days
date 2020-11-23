@@ -1,5 +1,5 @@
 """
-_slots__魔法
+__slots__魔法
 我们讲到这里，不知道大家是否已经意识到，Python是一门动态语言。
 通常，动态语言允许我们在程序运行时给对象绑定新的属性或方法，当然也可以对已经绑定的属性和方法进行解绑定。
 但是如果我们需要限定自定义类型的对象只能绑定某些属性，
@@ -38,6 +38,7 @@ class Person(object):
 def main():
     person = Person('王大锤', 22)
     person.play()
-    person._gender = '男'        # new attribute 
+    person._gender = '男'        # new attribute
+
     # AttributeError: 'Person' object has no attribute '_is_gay'
     # person._is_gay = True
