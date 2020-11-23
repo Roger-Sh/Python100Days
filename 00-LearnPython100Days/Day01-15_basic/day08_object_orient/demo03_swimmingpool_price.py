@@ -21,11 +21,13 @@ class Circle(object):
         """
         self._radius = radius       # private variable
 
-    @property                       # get private variable, @property装饰器,负责把一个方法变成属性调用的：
+    # get private variable, @property装饰器,负责把一个方法变成属性调用的：
+    @property
     def radius(self):
         return self._radius
 
-    @radius.setter                  # set private variable
+    # set private variable
+    @radius.setter
     def radius(self, radius):
         self._radius = radius if radius > 0 else 0
 
