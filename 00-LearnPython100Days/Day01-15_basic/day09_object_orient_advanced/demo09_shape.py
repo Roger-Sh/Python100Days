@@ -10,10 +10,13 @@ Author: 骆昊
 Date: 2018-03-12
 """
 
+# package for abstract class
 from abc import ABCMeta, abstractmethod
+
 from math import pi
 
 
+# abstract class Shape
 class Shape(object, metaclass=ABCMeta):
 
     @abstractmethod
@@ -25,14 +28,17 @@ class Shape(object, metaclass=ABCMeta):
         pass
 
 
+# class Circle inherit from class Shape
 class Circle(Shape):
 
     def __init__(self, radius):
         self._radius = radius
 
+    # override super.perimeter
     def perimeter(self):
         return 2 * pi * self._radius
 
+    # override super.perimeter
     def area(self):
         return pi * self._radius ** 2
 
@@ -40,6 +46,7 @@ class Circle(Shape):
         return '我是一个圆'
 
 
+# class Rect inherit from class Shape
 class Rect(Shape):
 
     def __init__(self, width, height):
