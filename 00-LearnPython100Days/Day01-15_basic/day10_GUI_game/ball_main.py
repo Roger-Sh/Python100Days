@@ -1,9 +1,8 @@
 import pygame
 from random import randint
 
-import ball_game.ball as ba
-import ball_game.color as co
-
+import ball as ba
+import color as co
 
 def main():
     # container for all balls
